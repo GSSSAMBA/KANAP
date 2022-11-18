@@ -1,20 +1,20 @@
 //Récupération des données contenu dans l'api 
 
 const recupererLesProduits = async function () {
-    await fetch ("http://localhost:3000/api/products")
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (data) {
-        return (products = data);
-    });
+    await fetch("http://localhost:3000/api/products")
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            return (products = data);
+        });
 };
 
 //Sélection des éléments HTML/Affichage des produits contenu au sein de l'Api
 
 const productElt = document.querySelector("#items");
 
-// Affichage des produits sur la page d'accueil
+// Affichage des produits sur la page d'accueilxxx
 async function afficherLesProduits() {
     await recupererLesProduits();
     products.forEach((product) => {
